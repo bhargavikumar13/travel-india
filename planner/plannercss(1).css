@@ -1,0 +1,25 @@
+
+#planner{
+	width: 100%;
+	height: auto;
+	background-color: beige;
+	padding: 20px;
+}
+h3{
+	color: lightblue;
+	padding-left: 20px;
+	/*background-color: pink;*/
+}
+h3#start, h3#end, h3#may, h3#be{
+	color: #e15b00;
+	align-self: center;
+	background-color: beige;
+}
+
+#dts{
+	float: left;
+	width: 100%;
+	height: auto;
+	background-color: beige;
+	padding: 20px;
+}

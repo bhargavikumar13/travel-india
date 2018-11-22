@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>planner</title>
+	<link rel="stylesheet" type="text/css" href="mylink.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+    <script type="text/javascript" src="javascript.js"></script>
+	<style type="text/css">
+			body 
+			{
+				background-image: url(planner1.jpg);
+		    	/* Center and scale the image*/
+		        background-position: center;
+	    		background-repeat: no-repeat;
+	    		background-size: 100%;
+	    		background-attachment: fixed;
+	    		margin: 0px;
+			}
+	</style>
+</head>
+	<body>
+        <div id="header" align="right">
+        <a href="map_page.html"><i class="material-icons" style="font-size:50px;position: absolute;left: 25px; top: 8px">public</i></a>
+        <a href="h_page.html"> Home </a>
+        <a href="h_page.html" style="color: #e15b00; border-bottom: 2px solid #e15b00;"> Planner </a>
+        <span class="homehead" onclick="document.getElementById('id01').style.display='block'" style="cursor:pointer;padding: 18px;">Login</span>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="kerala.html">Kerala</a>
+                <!-- <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a> -->
+            </div>
+        </div>
+        <span class="homehead" style="cursor:pointer;padding: 18px" onclick="openNav()">Destinations <i class="fa fa-angle-down" style="font-size:15px"></i></span>
+        <script>
+            function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+        <a href="h_page.html"> About </a>
+        </div>
+
+        <div class="box">
+            <span style="color: #e15b00;font-weight: 700;font-size: 20px;align-self: center;"> Planner </span><br>
+            <form name="form" method="POST" onsubmit="hello()">
+            <select class="destclass" name="Destination1" style="display: block;" id="start" required>
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination2" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination3" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination4" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination5" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination6" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination7" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination8" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination9" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <select name="Destination10" style="display: none;">
+                <option>Select</option>
+                <option>Kerala</option>
+                <option>Delhi</option>
+                <option>Jaipur</option>
+                <option>Agra</option>
+                <option>Mysore</option>
+                <option>Varanasi</option>
+                <option>Goa</option>
+                <option>Himachal Pradesh</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+            </select>
+            <span style="cursor: pointer; font-size: 10px; float: left; padding-bottom: 10px;color: blue;" onclick="dest()">+Add another Destination<br></span>
+            <span style="cursor: pointer; font-size: 10px; float: right; padding-bottom: 10px;color: blue;" onclick="destdel()">-Delete Destination<br></span>
+            <!-- <span style="color: #e15b00;font-weight: 400;font-size: 15px;align-self: left; padding: 21px"> Start Date </span> -->
+            <label style="color: #e15b00;font-weight: 600;font-size: 15px;float:  left; line-height: 2.7em;">Start Date:&emsp;<input type="date" name="startdate" style="width: 62%; float: none; margin: 0;" required></label><div>
+            <a href="planner_act.html" onclick="hello()" id="sub">See your plan</a>
+        </div></form>
+
+        </div>
+    </body>
+</html>

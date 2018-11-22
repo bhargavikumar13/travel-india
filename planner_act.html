@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map</title>
+	<link rel="stylesheet" type="text/css" href="mylink.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+    <link rel="stylesheet" type="text/css" href="plannercss.css">
+    <script type="text/javascript" src="javascript.js"></script>
+	<style type="text/css">
+			body 
+			{
+				background-color: white;
+		    	/* Center and scale the image*/
+		        background-position: center;
+	    		background-repeat: no-repeat;
+	    		background-size: 100%;
+	    		background-attachment: fixed;
+	    		
+	    		margin: 0px;
+			}
+	</style>
+    <script type="text/javascript">
+            function func()
+            {
+                dests = [
+                    sessionStorage.getItem("dest1"),
+                    sessionStorage.getItem("dest2"),
+                    sessionStorage.getItem("dest3"),
+                    sessionStorage.getItem("dest4"),
+                    sessionStorage.getItem("dest5"),
+                    sessionStorage.getItem("dest6"),
+                    sessionStorage.getItem("dest7"),
+                    sessionStorage.getItem("dest8"),
+                    sessionStorage.getItem("dest9"),
+                    sessionStorage.getItem("dest10")
+                ]
+                var i=0;
+                    while(dests[i]!="Select")
+                {
+                        i=i+1;
+
+                    }
+                    plan(sessionStorage.getItem("startdate"),i)
+                    daybday(sessionStorage.getItem("startdate"), dests)
+            }
+            function plan(date1,n)
+            {
+                alert(date1)
+                date1 = date1.split("-")
+                var mydate = new Date(date1[0], date1[1] - 1, date1[2])
+                var end = new Date(date1)
+                end.setDate(mydate.getDate() + (n*4))
+                document.getElementById("start").innerHTML = " " + mydate.toDateString();
+                document.getElementById("end").innerHTML = " " + end.toDateString();
+
+            }
+            function daybday(sdate, dests)
+            {
+                var i=0;
+                    while(dests[i]!="Select")
+                {
+                        
+                        var temp = new Date(sdate)
+                        temp.setDate(temp.getDate() + ((i)*4))
+                        document.getElementById(""+(i+1)).innerHTML =  dests[i] + (temp.toDateString());
+                        i=i+1;
+                }
+            }
+    </script>
+</head>
+	<body>
+        <div id="header" align="right">
+        <a href="map_page.html"><i class="material-icons" style="font-size:50px;position: absolute;left: 25px; top: 8px">public</i></a>
+        <a href="h_page.html"> Home </a>
+        <a href="planner.html" style="color: #e15b00; border-bottom: 2px solid #e15b00;" > Planner </a>
+        <span class="homehead" onclick="document.getElementById('id01').style.display='block'" style="cursor:pointer;padding: 18px;">Login</span>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="kerala.html">Kerala</a>
+                <!-- <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a> -->
+            </div>
+        </div>
+        <span class="homehead" style="cursor:pointer;padding: 18px" onclick="openNav()">Destinations <i class="fa fa-angle-down" style="font-size:15px"></i></span>
+        <script>
+            function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+        <a href="h_page.html"> About </a>
+        </div>
+        <div style="float: left;" id="dts">
+            <div style="color: lightblue">
+            <h3 style="float: left;" id="may"> Your trip starts at </h3><br>
+            <h3 style="float: left;" id="start"></h3> <br> <br></div>
+            <h3 style="float: right;" id="be"> Your trip ends at </h3><br>
+            <h3 style="float: right;" id="end"></h3>
+        </div>
+
+        <div class="day" style="display: none;">
+            <h3></h3>
+        </div>
+        <h3 style="float: left;" id="1"></h3> <br> <br></div>
+        <h3 style="float: left;" id="2"></h3> <br> <br></div>
+        <h3 style="float: left;" id="3"></h3> <br> <br></div>
+        <h3 style="float: left;" id="4"></h3> <br> <br></div>
+        <h3 style="float: left;" id="5"></h3> <br> <br></div>
+        <h3 style="float: left;" id="6"></h3> <br> <br></div>
+        <h3 style="float: left;" id="7"></h3> <br> <br></div>
+        <h3 style="float: left;" id="8"></h3> <br> <br></div>
+        <h3 style="float: left;" id="9></h3> <br> <br></div>
+        <h3 style="float: left;" id="10"></h3> <br> <br></div>
+
+        <script type="text/javascript">
+            func();
+        </script>
+
+        
+        
+</body>
+</html>

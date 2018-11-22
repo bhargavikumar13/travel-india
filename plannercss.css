@@ -1,0 +1,8 @@
+h3{
+	color: #f44242;
+	padding-left: 20px;
+}
+h3#start, h3#end, h3#may, h3#be{
+	color: #e15b00;
+	align-self: center;
+}
